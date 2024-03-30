@@ -1,13 +1,20 @@
+import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, NgClass],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
+  styleUrl: './app.component.css',
 })
 export class AppComponent {
-  title = 'ng-brigandyne';
+  imageAlt = 'Logo brigandyne';
+  imagePath = 'assets/images/logo.png';
+  isActiveClassStatus = false;
+
+  toggleIsActiveClass() {
+    this.isActiveClassStatus = !this.isActiveClassStatus;
+  }
 }
