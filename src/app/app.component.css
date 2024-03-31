@@ -6,3 +6,7 @@
   max-height: 70px;
   border-radius: 15px;
 }
+
+#side-menu {
+  display: inline-block;
+}
