@@ -1,1 +1,60 @@
-<h1 class="title">Hello Bulma CSS</h1>
+<div class="navbar has-shadow is-white">
+  <!-- logo / brand - class bulma-->
+  <div class="navbar-brand">
+    <!-- logo -->
+    <a class="navbar-item">
+      <img
+        id="navbar-logo"
+        [src]="imagePath"
+        [alt]="imageAlt"
+        class="py-2 px-2"
+      />
+      <span class="title is-5 has-text-white"> Le Quidam</span>
+    </a>
+
+    <!-- menu burger -->
+    <a
+      class="navbar-burger"
+      [ngClass]="isActiveClassStatus ? 'is-active' : 'is-not-active'"
+      id="burger"
+      (click)="toggleIsActiveClass()"
+    >
+      <span></span>
+      <span></span>
+      <span></span>
+      <span></span>
+    </a>
+  </div>
+
+  <!-- Menu -->
+  <div
+    class="navbar-menu"
+    id="nav-links"
+    [ngClass]="isActiveClassStatus ? 'is-active' : 'is-not-active'"
+  >
+    <div class="navbar-end">
+      <a
+        class="navbar-item"
+        [style]="isActiveClassStatus ? 'color: black' : 'color: white'"
+        >Connexion</a
+      >
+      <a
+        class="navbar-item"
+        [style]="isActiveClassStatus ? 'color: black' : 'color: white'"
+        >Inscription</a
+      >
+    </div>
+  </div>
+</div>
+
+<!-- Left side Menu -->
+<aside id="side-menu" class="menu p-2">
+  <p class="menu-label">Magie</p>
+  <ul class="menu-list">
+    <li><a>Liste des sorts</a></li>
+    <li><a>Mon grimoire</a></li>
+  </ul>
+  <p class="menu-label">Personnages</p>
+</aside>
+
+<router-outlet />
