@@ -2,7 +2,7 @@
   <!-- logo / brand - class bulma-->
   <div class="navbar-brand">
     <!-- logo -->
-    <a class="navbar-item">
+    <a class="navbar-item" routerLink="/">
       <img
         id="navbar-logo"
         [src]="imagePath"
@@ -47,14 +47,22 @@
   </div>
 </div>
 
-<!-- Left side Menu -->
-<aside id="side-menu" class="menu p-2">
-  <p class="menu-label">Magie</p>
-  <ul class="menu-list">
-    <li><a>Liste des sorts</a></li>
-    <li><a>Mon grimoire</a></li>
-  </ul>
-  <p class="menu-label">Personnages</p>
-</aside>
+<div class="columns">
+  <div class="column is-2">
+    <!-- Side menu gauche -->
+    <aside class="menu p-2">
+      <p class="menu-label">Magie</p>
+      <ul class="menu-list">
+        <li><a routerLink="/liste-des-sorts">Liste des sorts</a></li>
+      </ul>
+      <p class="menu-label">Personnages</p>
+    </aside>
+  </div>
 
-<router-outlet />
+  <!-- Contenu -->
+  <div class="column">
+    <div class="container mt-2">
+      <router-outlet />
+    </div>
+  </div>
+</div>

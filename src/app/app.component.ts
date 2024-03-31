@@ -1,11 +1,12 @@
 import { NgClass } from '@angular/common';
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterOutlet } from '@angular/router';
+import { ListOfSpellsComponent } from './list-of-spells/list-of-spells.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, NgClass],
+  imports: [ListOfSpellsComponent, RouterOutlet, RouterLink, NgClass],
   templateUrl: './app.component.html',
   styleUrl: './app.component.css',
 })
